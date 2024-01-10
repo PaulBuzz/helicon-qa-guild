@@ -17,7 +17,7 @@ To run the code itself use ```python3 %file_name%```, for tests run ```pytest %f
 
 Playwright supports lots of CLI commands, some of the most useful are:
 ```
--- slowmo 1000 (any number can be here, miliseconds), makes tests run a bit slower due to high speed of Playwright
+-- slowmo=1000 (any number can be here, miliseconds), makes tests run a bit slower due to high speed of Playwright
 -- headed (shows what happens in real test)
 -- browser (chromium/firefox/webkit)
 -- device (="iPhone 12 Pro" for instance if you want to try your test there)
