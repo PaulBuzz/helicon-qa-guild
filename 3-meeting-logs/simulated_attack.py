@@ -23,8 +23,8 @@ def check_logs(stage_strings: List[str], prod_strings: List[str]) -> Dict:
 
     print("\n")
     # Requests towards stage and status codes
-    for string in stage_strings:  # noqa: F402
-        url = stage_base_url + string
+    for str in stage_strings:
+        url = stage_base_url + str
         response = requests.get(url)
         results["stage_responses"].append(
             {"url": url, "status_code": response.status_code}
@@ -32,8 +32,8 @@ def check_logs(stage_strings: List[str], prod_strings: List[str]) -> Dict:
         print(f"Stage URL: {url} || Status Code: {response.status_code}")
 
     # Requests towards prod and status codes
-    for string in prod_strings:
-        url = prod_base_url + string
+    for str in prod_strings:
+        url = prod_base_url + str
         response = requests.get(url)
         results["prod_responses"].append(
             {"url": url, "status_code": response.status_code}
